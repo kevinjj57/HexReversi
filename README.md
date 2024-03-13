@@ -5,10 +5,12 @@
 
 Overview:
 For our game of Reversi, we make these assumptions:
+
     - A player knows their color (black or white).
     - They know the basic rules of Reversi and what makes a move valid.
 
 Changes for Part 2:
+
     - Playing no longer requires colors or players
     - Added the following methods to our read only interface:
         - getBoard
@@ -20,6 +22,7 @@ Changes for Part 2:
     - Moved player interface and class outside the model directory into its own directory "player"
 
 Changes for Part 3:
+
     - Updated JavaDocs
     - IBoard
     - Empty enum
@@ -30,13 +33,15 @@ Changes for Part 3:
     - Start Game
 
 Changes for Part 5:
+
     - Implemented all 5 extra credit features
+
         - Hints: Keep track of hints with a boolean flag that determines whether to run
         a display hints method in our view. If true, display hints, if not don't display hints.
         They can be turned on and off while playing for each player with "h" and can also be
         initialized at runtime with "hints" or nothing for no hints.
 
-        - Square Model: Abstracted our board into an IBoard interface. We have two classes for our
+        Square Model: Abstracted our board into an IBoard interface. We have two classes for our
         different board types. Then we abstracted our Reversi implementations into an abstract
         class for the functionality that doesn't care about board shape (ie placeToken, etc) and
         then extended that class into two classes, HexReversi for hexagon and SquareReversi.
@@ -63,6 +68,7 @@ Changes for Part 5:
 
 Quickstart:
 Below are various snippets showcasing our game and how a user may interact with it
+
     - Start game
     - Place a token
     - Pass a turn
@@ -73,6 +79,7 @@ will look like in each one.
 Playing a Game:
 To begin playing a game of Reversi, you must first configure the game. Enter a combination of two
 of the following keywords:
+
     - human
     - strategy1
     - strategy2
@@ -84,9 +91,13 @@ of the following keywords:
 The human keyword is to allow for a human player, while strategies 1-4 configure an AI with a
 specific move strategy. Please refer to the strategy section below for what each strategy means.
 Below are some example VALID command line arguments:
+
 human human
+
 human strategy1
+
 strategy1 strategy2
+
 strategy4 human
 
 The following examples configure various game states, such as a human vs human, a human vs ai, and
@@ -141,6 +152,7 @@ Key subcomponents:
 
 Code Navigation:
 Our codebase has three directories of note:
+
     1. docs
     2. src
         a. controller
@@ -164,6 +176,7 @@ TestTextView has the tests for the TextualView, etc...
 Extra Credit Implementations:
 We have implemented various extra credit features. They are listed below along with their file
 locations.
+
     1. Strategies. We implemented all 4 strategies. They can be found within the strategy directory
        in src. Our strategies are set up so that each one returns a list of possible moves given
        that strategy. The list is sorted from top left to bottom right in terms of Coords. Meaning
