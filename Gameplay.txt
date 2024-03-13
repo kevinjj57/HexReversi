@@ -1,0 +1,104 @@
+A player can make one of two moves:
+    1. Pass. Let other player move
+    2. Select a legal empty cell and play a disc in that cell
+
+BLACK MOVES FIRST
+
+
+What is a legal move:
+     - Disc being placed is adjacent (in at least 1 direction) to a straight line of the opponent
+       discs, at the far end of which is another player A disc. In other words we sandwich the
+       opponents discs with our discs.
+
+     - A player can place a disc between the opponents disc (which normally results in a sandwich)
+       IF the player placing the disc forms a valid sandwich by placing it. The placed token does
+       NOT get flipped, instead it flips the opponents discs
+
+                                            Empty Board
+                                             _ _ _ _ _ _
+                                            _ _ _ _ _ _ _
+                                           _ _ _ _ _ _ _ _
+                                          _ _ _ _ _ _ _ _ _
+                                         _ _ _ _ _ _ _ _ _ _
+                                        _ _ _ _ _ _ _ _ _ _ _
+                                         _ _ _ _ _ _ _ _ _ _
+                                          _ _ _ _ _ _ _ _ _
+                                           _ _ _ _ _ _ _ _
+                                            _ _ _ _ _ _ _
+                                             _ _ _ _ _ _
+
+
+                                            Starting Board
+                                              O = White
+                                              X = Black
+                                             _ _ _ _ _ _
+                                            _ _ _ _ _ _ _
+                                           _ _ _ _ _ _ _ _
+                                          _ _ _ _ _ _ _ _ _
+                                         _ _ _ _ X O _ _ _ _
+                                        _ _ _ _ O _ X _ _ _ _
+                                         _ _ _ _ X O _ _ _ _
+                                          _ _ _ _ _ _ _ _ _
+                                           _ _ _ _ _ _ _ _
+                                            _ _ _ _ _ _ _
+                                             _ _ _ _ _ _
+
+
+                                           Black Moves First
+                                              _ _ _ _ _ _
+                                             _ _ _ _ _ _ _
+                                            _ _ _ _ _ _ _ _
+                                           _ _ _ _ X _ _ _ _
+                                          _ _ _ _ X O _ _ _ _
+                                         _ _ _ _ O _ X _ _ _ _
+                                          _ _ _ _ X O _ _ _ _
+                                           _ _ _ _ _ _ _ _ _
+                                            _ _ _ _ _ _ _ _
+                                             _ _ _ _ _ _ _
+                                              _ _ _ _ _ _
+
+
+                                         Black Forms Valid Sandwich
+                                         Flip White Piece Over
+                                            _ _ _ _ _ _
+                                           _ _ _ _ _ _ _
+                                          _ _ _ _ _ _ _ _
+                                         _ _ _ _ X _ _ _ _
+                                        _ _ _ _ X X _ _ _ _
+                                       _ _ _ _ O _ X _ _ _ _
+                                        _ _ _ _ X O _ _ _ _
+                                         _ _ _ _ _ _ _ _ _
+                                          _ _ _ _ _ _ _ _
+                                           _ _ _ _ _ _ _
+                                            _ _ _ _ _ _
+
+
+                                           White Moves
+                                           Forms Valid Sandwich
+                                              _ _ _ _ _ _
+                                             _ _ _ _ _ _ _
+                                            _ _ _ _ O _ _ _
+                                           _ _ _ _ X _ _ _ _
+                                          _ _ _ _ X O _ _ _ _
+                                         _ _ _ _ O _ X _ _ _ _
+                                          _ _ _ _ X O _ _ _ _
+                                           _ _ _ _ _ _ _ _ _
+                                            _ _ _ _ _ _ _ _
+                                             _ _ _ _ _ _ _
+                                              _ _ _ _ _ _
+
+
+                                             Flips Black Pieces Over
+                                                _ _ _ _ _ _
+                                               _ _ _ _ _ _ _
+                                              _ _ _ _ O _ _ _
+                                             _ _ _ _ O _ _ _ _
+                                            _ _ _ _ O O _ _ _ _
+                                           _ _ _ _ O _ X _ _ _ _
+                                            _ _ _ _ X O _ _ _ _
+                                             _ _ _ _ _ _ _ _ _
+                                              _ _ _ _ _ _ _ _
+                                               _ _ _ _ _ _ _
+                                                _ _ _ _ _ _
+
+
